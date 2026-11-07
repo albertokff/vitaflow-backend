@@ -1,5 +1,6 @@
 package com.vitaflow.plugins
 
+import com.vitaflow.db.AgendamentosTable
 import com.vitaflow.db.AtendimentosTable
 import com.vitaflow.db.PacientesTable
 import io.ktor.server.application.*
@@ -23,7 +24,8 @@ fun Application.configureDatabases() {
     transaction {
         SchemaUtils.create(
             PacientesTable,
-            AtendimentosTable
+            AtendimentosTable,
+            AgendamentosTable
         )
     }
 }

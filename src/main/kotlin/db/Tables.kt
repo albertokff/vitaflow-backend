@@ -34,3 +34,14 @@ object AtendimentosTable: IntIdTable("atendimentos") {
     val criadoEm = datetime("criado_em").default(LocalDateTime.now())
     val atualizadoEm = datetime("atualizado_em").default(LocalDateTime.now())
 }
+
+object AgendamentosTable: IntIdTable("agendamentos") {
+    val data = varchar("data", 20)
+    val hora = varchar("hora", 10)
+    val nomePaciente = varchar("nome_paciente", 100)
+    val cpf = varchar("cpf", 14)
+    val especialidade = varchar("especialidade", 50)
+    val medico = varchar("medico", 50)
+    val status = varchar("status", 20).default("AGENDADO")
+    val criadoEm = datetime("criado_em").default(LocalDateTime.now())
+}
