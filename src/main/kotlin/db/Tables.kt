@@ -5,7 +5,7 @@ import org.jetbrains.exposed.sql.javatime.datetime
 import java.time.LocalDateTime
 
 object PacientesTable: IntIdTable("pacientes") {
-    val cpf = varchar("cpf", 11).uniqueIndex()
+    val cpf = varchar("cpf", 14).uniqueIndex()
     val nome = varchar("nome", 100)
     val dataNascimento = varchar("data_nascimento", 10)
     val cartaoSus = varchar("cartao_sus", 15).nullable()
